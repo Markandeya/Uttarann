@@ -1,0 +1,30 @@
+{
+  "name": "Uttarann",
+  "version": "1.0.0",
+  "description": "Official website of Uttarann Charitable Trust. Guru ॐ.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Markandeya/Uttarann.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Markandeya/Uttarann/issues"
+  },
+  "homepage": "https://github.com/Markandeya/Uttarann#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.0.2"
+  },
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "jquery": "^3.4.1",
+    "popper.js": "^1.15.0"
+  }
+}

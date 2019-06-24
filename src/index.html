@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Maashree's Uttarann</title>
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel='stylesheet' href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="./css/bootstrap.css">
+        <link rel="stylesheet" href="./css/styles.css">
+        <link rel="stylesheet" href="./css/animate.css">
+    </head>
+
+    <body>
+
+        <!-- Bootstrap Preloader -->
+        <div id="overlay">
+            <div class="d-flex justify-content-center">
+              <div class="spinner-grow text-primary" role="status">
+                <span class="sr-only">Loading...</span>
+              </div>
+            </div>
+        </div>
+        <!--Bootstrap Preloader end -->
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-inner navbar-light">
+            <div class="container">
+              <a href="#" class="navbar-brand d-flex align-items-center">
+                Maashree's &nbsp; <span style="font-style: italic;"> Uttarann </span> 
+              </a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="./">HOME
+                      <span class="sr-only">(current)</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">ABOUT US</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">SHREEJAASHRAM</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">CONTACT US</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+        </nav>
+        <!-- Navigation end -->
+
+        <div class="container">
+            <!-- Slider -->
+            <div id="carouselExampleFade" class="carousel slide carousel-fade" data-interval=6000>
+            <!-- <ol class="carousel-indicators">
+                <li data-target="#carouselExampleFade" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleFade" data-slide-to="1"></li>
+                <li data-target="#carouselExampleFade" data-slide-to="2"></li>
+            </ol> -->
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img class="d-block w-100" src="assets/banner_bg_eee.jpg" alt="First slide">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 data-animation="animated fadeIn slower">Meditation is a state of nothingness</h5>
+                        <p data-animation="animated fadeIn slower delay-2s">It helps you to to be in a thoughtless state.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100" src="assets/banner_bg_eee.jpg" alt="Second slide">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 data-animation="animated fadeIn slower">Thought pollutes your mind</h5>
+                        <p data-animation="animated fadeIn slower delay-2s">The more the worries the more you become weak.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100" src="assets/banner_bg_eee.jpg" alt="Third slide">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 data-animation="animated fadeIn slower">GURU is not a topic</h5>
+                        <p data-animation="animated fadeIn slower delay-2s">He is an experience.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100" src="assets/banner_bg_eee.jpg" alt="Third slide">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 data-animation="animated fadeIn slower">You need a live GURU to reach the TRUTH</h5>
+                        <p data-animation="animated fadeIn slower delay-2s">TRUTH as we need the (Live) rain to get the crop.</p>
+                    </div>
+                </div>
+                
+              </div>
+            </div>
+            <!-- Slider end -->
+        </div>
+
+              
+        <script src="/js/jquery.min.js"></script>
+        <script src="/js/popper.min.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
+
+        <!-- Custom Javascript-->
+        <script>
+
+            // Hide preloader on page load
+
+            const overlay = document.querySelector('#overlay');
+
+            window.addEventListener('load', function () {
+                $('.circle').remove();
+                $('.wave').remove();
+                $(overlay).remove();
+            });
+
+            //Carousel
+            var $myCarousel = $('#carouselExampleFade');
+            $myCarousel.carousel({
+                interval: 6000
+            });
+
+            function doAnimations(elems) {
+                  var animEndEv = 'webkitAnimationEnd animationend';
+
+                  elems.each(function () {
+                    var $this = $(this),
+                        $animationType = $this.data('animation');
+
+                    // Add animate.css classes to
+                    // the elements to be animated
+                    // Remove animate.css classes
+                    // once the animation event has ended
+                    $this.addClass($animationType).one(animEndEv, function () {
+                      $this.removeClass($animationType);
+                    });
+                  });
+                }
+
+                // Select the elements to be animated
+                // in the first slide on page load
+                var $firstAnimatingElems = $myCarousel.find('.carousel-item:first')
+                  .find('[data-animation ^= "animated"]');
+
+                // Apply the animation using the doAnimations()function
+                doAnimations($firstAnimatingElems);
+
+                // Attach the doAnimations() function to the
+                // carousel's slide.bs.carousel event
+                $myCarousel.on('slide.bs.carousel', function (e) {
+                  // Select the elements to be animated inside the active slide
+                  var $animatingElems = $(e.relatedTarget)
+                    .find("[data-animation ^= 'animated']");
+                  doAnimations($animatingElems);
+                });
+
+            
+
+        </script>
+
+    </body>
+</html>
+

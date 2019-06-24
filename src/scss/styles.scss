@@ -1,0 +1,59 @@
+@font-face {
+    font-family: 'aileronlight';
+    src: url('aileron-light-webfont.woff2') format('woff2'),
+         url('aileron-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+$gold: darkgoldenrod;
+.navbar {
+    font-family: 'aileronlight';
+}
+
+/* Spinner */
+#overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    min-height: 100%;
+    width: 100%;
+    background-color: #fff;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.spinner-grow {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  vertical-align: text-bottom;
+  background-color: currentColor;
+  border-radius: 50%;
+  opacity: 0;
+  animation: spinner-grow 2s linear infinite;
+  }
+
+/* Spinner end */
+
+/* Navbar */
+
+.navbar-light .navbar-nav .show > .nav-link, .navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .nav-link.active {
+    color: $gold;
+}
+
+
+/* Navbar end */
+
+.navbar {
+    margin-bottom: 1em;
+    background-color: #fff;
+}
+/* Carousel */
+
+
+
