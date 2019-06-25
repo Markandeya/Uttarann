@@ -78,10 +78,35 @@ $kavi: rgb(217, 135, 117);
 
 
 /* Carousel */
+#carouselExampleFade {
+    max-width:1366px;
+    min-height: 400px;
+    height: 60vh;
+    .carousel-item {
+        min-height: 400px;
+        height: 60vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center;
+    }
+}
+
 .carousel-indicators li {
   width: 10px;
   height: 10px;
   border-radius: 100%;
+}
+
+.saying {
+    font-size: 1em;
+    left: 50%;
+    top: 52%;
+    position: absolute;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 100;
 }
 
 .carousel-inner > .item {
@@ -120,7 +145,7 @@ div.line {
     font-size: 0.8em;
     min-height: 200px !important;
     width: 100%;
-    background-color: goldenrod;
+    background-color: darkgoldenrod;
     padding: 2em;
     color: #fafdcb;
     text-shadow: 2px 2px 5px darkgoldenrod;
