@@ -64,6 +64,14 @@
   height: 10px;
   border-radius: 100%; }
 
+.carousel-inner > .item {
+  position: relative;
+  display: none;
+  -webkit-transition: 4s ease-in-out left;
+  -moz-transition: 4s ease-in-out left;
+  -o-transition: 4s ease-in-out left;
+  transition: 4s ease-in-out left; }
+
 /* Carousel end */
 /* Read more */
 a.kavi:hover {
