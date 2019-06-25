@@ -145,10 +145,11 @@ div.line {
     font-size: 0.8em;
     min-height: 200px !important;
     width: 100%;
-    background-color: darkgoldenrod;
+    background-color: #011638;
     padding: 2em;
-    color: #fafdcb;
-    text-shadow: 2px 2px 5px darkgoldenrod;
+    color: #fff;
+    --color: #fafdcb;
+    --text-shadow: 2px 2px 5px darkgoldenrod;
 }
 
 /* Footer end */
