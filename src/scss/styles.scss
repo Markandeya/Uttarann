@@ -28,6 +28,10 @@ $kavi: rgb(217, 135, 117);
     color: $gold;
 }
 
+.uttarann-b {
+    font-family: 'Playball', cursive;
+}
+
 .heading {
     font-family: 'Nanum Myeongjo';
     margin: 1em 1em;
@@ -50,7 +54,7 @@ $kavi: rgb(217, 135, 117);
     min-height: 100%;
     width: 100%;
     background-color: #fff;
-    z-index: 999;
+    z-index: 1000;
     display: flex;
     justify-content: center;
     align-items: center;

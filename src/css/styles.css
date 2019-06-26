@@ -19,6 +19,9 @@
   font-family: 'Playball', cursive;
   color: goldenrod; }
 
+.uttarann-b {
+  font-family: 'Playball', cursive; }
+
 .heading {
   font-family: 'Nanum Myeongjo';
   margin: 1em 1em; }
@@ -38,7 +41,7 @@
   min-height: 100%;
   width: 100%;
   background-color: #fff;
-  z-index: 999;
+  z-index: 1000;
   display: flex;
   justify-content: center;
   align-items: center; }
