@@ -17,14 +17,12 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
     </head>
 
-    <body>
+    <body class="loading">
 
         <!-- Bootstrap Preloader -->
         <div id="overlay">
             <div class="d-flex justify-content-center">
-              <div class="spinner-grow text-primary" role="status">
-                <span class="sr-only">Loading...</span>
-              </div>
+              <img src="./assets/crown_animated.svg" style="min-height: 25px" alt="">
             </div>
         </div>
         <!--Bootstrap Preloader end -->
@@ -89,8 +87,8 @@
         <!-- Navigation end -->
 
         <!-- Slider -->
-        <div class="container">
-            <div id="carouselExampleFade" class="carousel slide carousel-fade shadow-lg mb-5 bg-white rounded" data-ride="carousel" data-interval=7000>
+        <div class="container  shadow-lg rounded p-1" style="background-color: rgb(43,38,32);">
+            <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel" data-interval=7000>
             <ol class="carousel-indicators">
                 <li data-target="#carouselExampleFade" data-slide-to="0" class="active"></li>
                 <li data-target="#carouselExampleFade" data-slide-to="1"></li>
@@ -135,8 +133,10 @@
         <!-- Guru aum -->
         
         <div class="container">
+            <div class="d-flex justify-content-center">
+              <h1 class="heading text-center" style="border-bottom: 1px solid goldenrod"> Guru Aum.</h1>
+            </div>        
                     
-                    <h1 class="heading text-center"> Guru Aum.</h1>
             <div class="row">
 
                 <div class="col-md-4 d-flex align-items-center justify-content-center">
@@ -486,6 +486,7 @@
                 $('.circle').remove();
                 $('.wave').remove();
                 $(overlay).remove();
+                $('body').removeClass('loading');
             });
 
             //Carousel
